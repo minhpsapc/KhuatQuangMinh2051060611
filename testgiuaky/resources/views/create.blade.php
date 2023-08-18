@@ -54,13 +54,13 @@
             <div class="row mb-3">
                 <label class="col-sm-2 col-label-form">createat</label>
                 <div class="col-sm-10">
-                    <input type="text" name="createat" class="form-control" />
+                    <input type="datetime-local" name="createat" class="form-control" />
                 </div>
             </div>
             <div class="row mb-3">
                 <label class="col-sm-2 col-label-form">updatedat</label>
                 <div class="col-sm-10">
-                    <input type="text" name="updatedat" class="form-control" />
+                    <input type="datetime-local" name="updatedat" class="form-control" />
                 </div>
             </div>
             <div class="text-center">
