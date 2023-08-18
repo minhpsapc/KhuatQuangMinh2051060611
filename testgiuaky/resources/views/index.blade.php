@@ -22,13 +22,13 @@
     <div class="card-body">
         <table class="table table-bordered">
             <tr>
-                <th>channelid</th>
-                <th>channelname</th>
-                <th>description</th>
-                <th>subscriberscount</th>
-                <th>url</th>
-                <th>createat</th>
-                <th>updatedat</th>
+                <th>Channelid</th>
+                <th>Channelname</th>
+                <th>Description</th>
+                <th>Subscriberscount</th>
+                <th>Url</th>
+                <th>Createat</th>
+                <th>Updatedat</th>
                 <th>Action</th>
             </tr>
             @if(count($data) > 0)
@@ -49,7 +49,30 @@
                                 @method('DELETE')
                                 <a href="{{ route('faketubes.show', $row->id) }}" class="btn btn-primary btn-sm">View</a>
                                 <a href="{{ route('faketubes.edit', $row->id) }}" class="btn btn-warning btn-sm">Edit</a>
-                                <input type="submit" class="btn btn-danger btn-sm" value="Delete" />
+                                <a class="btn btn-primary" href="#" data-id={{$row->id }} data-toggle="modal" data-target="#{{$row->id}}">Delete</a>
+                                <!-- Modal -->
+                    
+                        <div class="modal fade" id="{{$row->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Delete Company</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        Are you sure delete the company with id: {{$row->id}}?
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                        <button type="submit" class="btn btn-danger">Delete</button>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    
                             </form>
 
                         </td>
@@ -65,6 +88,11 @@
         </table>
         {!! $data->links() !!}
     </div>
-</div>
+ </div> 
+   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
+</body>
+</html>
 @endsection

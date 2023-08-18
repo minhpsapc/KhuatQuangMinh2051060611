@@ -107,8 +107,9 @@ class FaketubeController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Faketube $faketube)
+    public function destroy(string $id)
     {
+        $faketube=Faketube::find($id);
         $faketube->delete();
 
         return redirect()->route('faketubes.index')->with('success', 'Channel Data deleted successfully');
