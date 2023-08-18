@@ -9,37 +9,37 @@
             @csrf
             @method('PUT')
             <div class="row mb-3">
-                <label class="col-sm-2 col-label-form">channelid</label>
+                <label class="col-sm-2 col-label-form">Channelid</label>
                 <div class="col-sm-10">
                     <input type="text" name="channelid" class="form-control" value="{{ $faketube->channelid }}" />
                 </div>
             </div>
             <div class="row mb-3">
-                <label class="col-sm-2 col-label-form">channelname</label>
+                <label class="col-sm-2 col-label-form">Channelname</label>
                 <div class="col-sm-10">
                     <input type="text" name="channelname" class="form-control" value="{{ $faketube->channelname }}" />
                 </div>
             </div>
             <div class="row mb-3">
-                <label class="col-sm-2 col-label-form">description</label>
+                <label class="col-sm-2 col-label-form">Description</label>
                 <div class="col-sm-10">
                     <input type="text" name="description" class="form-control" value="{{ $faketube->description }}" />
                 </div>
             </div>
             <div class="row mb-3">
-                <label class="col-sm-2 col-label-form">subscriberscount</label>
+                <label class="col-sm-2 col-label-form">Subscriberscount</label>
                 <div class="col-sm-10">
                     <input type="text" name="subscriberscount" class="form-control" value="{{ $faketube->subscriberscount }}" />
                 </div>
             </div>
             <div class="row mb-3">
-                <label class="col-sm-2 col-label-form">url</label>
+                <label class="col-sm-2 col-label-form">Url</label>
                 <div class="col-sm-10">
                     <input type="text" name="url" class="form-control" value="{{ $faketube->url }}" />
                 </div>
             </div>
             <div class="row mb-3">
-                <label class="col-sm-2 col-label-form">createat</label>
+                <label class="col-sm-2 col-label-form">Createat</label>
                 <div class="col-sm-10">
                     <input type="datetime-local" name="createat" class="form-control" value="{{ $faketube->createat }}" />
                 </div>
